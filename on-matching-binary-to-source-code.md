@@ -163,7 +163,7 @@ int main(int argc, char * argv[]) {
 图2显示了创建的findPrimeSpeed函数的控制流程图，将代码解析为AST，并使用了[Joern](http://www.mlsec.org/joern/)将其转换为CFG。
 
 
-![控制流程图](assets\控制流程图0.png)
+![控制流程图](assets/控制流程图0.png)
 
 
 
@@ -183,7 +183,7 @@ int main(int argc, char * argv[]) {
 
 图3显示了findPrimeSpeed函数的两个控制流程图。图３的左侧图是从翻译C程序的源码获得LLVM IR的过程导出的，该过程并没有执行任何进一步的分析或优化。图３右侧是LLVM IR完全优化的导出图，表示的是LLVM的输出尽可能引入优化中介码(IR)的过程。类似地，图４显示的是使用微软ＶＣ编译器编写的x86程序派生出的findPrimeSpeed函数流程图，没有任何的优化。
 
-![图3](assets\控制流程图.png)
+![图3](assets/控制流程图.png)
 
 
 > 图３　从LLVM字节码创建的findPrimeSpeed函数的控制流图。
@@ -194,7 +194,7 @@ int main(int argc, char * argv[]) {
 * **1.CFG语言独立性:**结合CFG的源顺序基本块，构建在结构上与LLVM IR或x86组件相同的、且未经优化的一个控制流程图。换而言之，控制流程图似乎是与语言无关的，它就是一个抽象的特征的表现形式，无论用什么语言编写的程序，都可以用它表示代码的流程。控制流程图的整体结构通常不受诸如x86指令集和低级的机器语言的复杂性影响，让人易于理解，这也是逆向工程中常用控制流程图呈现代码的重要原因。
 
 
-![图4](assets\控制流程图2.png)
+![图4](assets/控制流程图2.png)
 
 
 
